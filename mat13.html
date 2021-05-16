@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h4 style="text-align: center;">Carousel</h4>
+      <div>
+        <div
+          style="display: flex; justify-content: space-around; margin-left:100;"
+          class="container"
+        >
+          <a class="white-text btn blue">CSS1</a>
+          <a class="white-text btn green">CSS2</a>
+          <a class="white-text btn yellow">JS1</a>
+          <a class="white-text btn red">JS2</a>
+        </div>
+      </div>
+      <br />
+    </div>
+    <br />
+    <br />
+
+    <div class="row container">
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="oar.jpg"/></a>
+        <a class="carousel-item" href="#two!"><img src="forest.jpg"/></a>
+        <a class="carousel-item" href="#three!"><img src="asianwoman.jpg"/></a>
+        <a class="carousel-item" href="#four!"><img src="woman.jpg"/></a>
+        <a class="carousel-item" href="#five!"><img src="bike.jpg"/></a>
+      </div>
+      <br />
+      <br />
+
+      <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img src="horiz1.jpg"/></a>
+        <a class="carousel-item" href="#two!"><img src="horiz2.jpg"/></a>
+        <a class="carousel-item" href="#three!"><img src="horiz3.jpg"/></a>
+        <a class="carousel-item" href="#four!"><img src="horiz4.jpg"/></a>
+        <a class="carousel-item" href="#four!"><img src="horiz5.jpg"/></a>
+      </div>
+
+      <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-fixed-item center">
+          <a class="btn waves-effect black white-text darken-text-2">button</a>
+        </div>
+        <div class="carousel-item red white-text" href="#one!">
+          <h2>First Panel</h2>
+          <p class="white-text">This is your first panel</p>
+        </div>
+        <div class="carousel-item amber white-text" href="#two!">
+          <h2>Second Panel</h2>
+          <p class="white-text">This is your second panel</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+          <h2>Third Panel</h2>
+          <p class="white-text">This is your third panel</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+          <h2>Fourth Panel</h2>
+          <p class="white-text">This is your fourth panel</p>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".carousel");
+        var instances = M.Carousel.init(elems);
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".carousel-slider .carousel");
+        var instances = M.Carousel.init(elems, {
+          fullWidth: true,
+          noWrap: false
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".center .carousel");
+        var instances = M.Carousel.init(elems, {
+          fullWidth: true,
+          indicators: true
+        });
+      });
+    </script>
+  </body>
+</html>
