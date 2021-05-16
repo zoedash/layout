@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h4 style="text-align: center;">Breadcrumbs & Footer</h4>
+      <div>
+        <div
+          style="display: flex; justify-content: space-around; margin-left:100;"
+          class="container"
+        >
+          <a class="white-text btn blue">CSS1</a>
+          <a class="white-text btn green">CSS2</a>
+          <a class="white-text btn yellow">JS1</a>
+          <a class="white-text btn red">JS2</a>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="row container">
+      <form class="col s12">
+        <div class="switch">
+          <label>
+            Off
+            <input type="checkbox" />
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+
+        <div class="switch">
+          <label>
+            Off
+            <input type="checkbox" />
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>UPLOAD FILE</span>
+            <input type="file" />
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" />
+          </div>
+        </div>
+
+        <p class="range-field">
+          <input type="range" id="test5" min="0" max="100" />
+        </p>
+
+        <input type="text" class="datepicker" placeholder="Choose a Date" />
+
+        <input type="text" class="timepicker" placeholder="Choose a Time" />
+
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="first_name">Post</label>
+            <span class="helper-text" data-error="wrong" data-success="right"
+              >Type a Fruit</span
+            >
+          </div>
+        </div>
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const mySel = document.querySelectorAll("select");
+        var instances = M.FormSelect.init(mySel, {});
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".datepicker");
+        var instances = M.Datepicker.init(elems);
+        // var instance = M.Datepicker.getInstance(elem);
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".timepicker");
+        var instances = M.Timepicker.init(elems);
+        // var instance = M.Datepicker.getInstance(elem);
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
