@@ -49,9 +49,13 @@
         <a class="carousel-item" href="#four!"><img src="horiz5.jpg"/></a>
       </div>
 
-      <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel carousel-slider center">
         <div class="carousel-fixed-item center">
-          <a class="btn waves-effect black white-text darken-text-2">button</a>
+          <a
+            class="btn waves-effect black white-text darken-text-2"
+            style="margin-bottom: 30px;"
+            >button</a
+          >
         </div>
         <div class="carousel-item red white-text" href="#one!">
           <h2>First Panel</h2>
@@ -82,15 +86,22 @@
       });
 
       document.addEventListener("DOMContentLoaded", function() {
-        var elems = document.querySelectorAll(".carousel-slider .carousel");
+        var elems = document.querySelectorAll(".carousel-slider");
         var instances = M.Carousel.init(elems, {
-          fullWidth: true,
-          noWrap: false
+          indicators: true
         });
       });
 
+      //   document.addEventListener("DOMContentLoaded", function() {
+      //     var elems = document.querySelectorAll(".center");
+      //     var instances = M.Carousel.init(elems, {
+      //       fullWidth: true,
+      //       noWrap: false
+      //     });
+      //   });
+
       document.addEventListener("DOMContentLoaded", function() {
-        var elems = document.querySelectorAll(".center .carousel");
+        var elems = document.querySelectorAll(" .carousel-slider .center");
         var instances = M.Carousel.init(elems, {
           fullWidth: true,
           indicators: true
